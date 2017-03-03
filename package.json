@@ -22,10 +22,5 @@
     "type": "git",
     "url": "git+https://github.com/cccyb/Reader.git"
   },
-  "author": "cccyb",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cccyb/Reader/issues"
-  },
-  "homepage": "https://github.com/cccyb/Reader#readme"
 }
