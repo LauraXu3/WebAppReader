@@ -9,5 +9,7 @@
 
 
 ##setup
-  $ npm install
-  $ node app.js
+<pre>
+$ npm install
+$ node app.js
+</pre>
