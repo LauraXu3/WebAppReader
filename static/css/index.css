@@ -1,3 +1,7 @@
+html,body,.container-wrap{
+
+}
+
 .container-warp{
 			height: 100%;
 			overflow: hidden;
@@ -9,8 +13,9 @@
 			bottom:0px;
 			left:0px;
 			right: 0px;
-			overflow-y:scroll; 
+			overflow: auto;
 		}
+.container-scroll::-webkit-scrollbar {display:none}
 		.header-tab{
         padding: 0px 90px;
         text-align: center;
@@ -31,7 +36,7 @@
         background: #777;
     }
     .header-tab a:before{
-        content: '\4e66\67b6';
+        content: '';
         display:block;
         margin: 0 auto;
         width:2em;
@@ -72,11 +77,9 @@
         text-align: center;
         -webkit-tap-highlight-color:rgba(0,0,0,0);
     }
-    
     .Swipe-tab_2 a {
         width: 50%;
     }
-    
     .Swipe-tab__on{
         color: #ff6600;
     }
@@ -366,7 +369,7 @@
     	margin:8px 0 0;
     	height: 2.8em;
     	font:12px/1.4em a;
-    	color:rgb(0,0,0,0.6);
+    	color:rgba(0,0,0,0.6);
     	overflow: hidden;
     	text-overflow:ellipsis;
     	white-space: nowrap;

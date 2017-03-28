@@ -2,7 +2,7 @@ var koa = require('koa');
 var route = require('koa-route');
 var app = koa();
 
-var views = require('co-views')
+var views = require('co-views');
 var render = views('./view', {
   map: { html: 'ejs' }
 });
@@ -14,22 +14,18 @@ app.use(koa_static({
 	maxage: 0
 }));
 
-
-
 app.use(route.get('/', function*(){
 	this.set('Cache-Control', 'no-cache');
 	this.body = yield render('index');
 }));
 
-
- var querystring = require('querystring')
+var querystring = require('querystring')
 app.use(route.get('/book', function*(){
 	this.set('Cache-Control', 'no-cache');
 	var params = querystring.parse(this.req._parsedUrl.query);
 	var bookId = params.id;
 	this.body = yield render('book',{nav:'书籍详情',bookId:bookId});
 }));
-
 
 app.use(route.get('/reader', function*(){
 	this.set('Cache-Control', 'no-cache');
@@ -40,8 +36,6 @@ app.use(route.get('/ajax/index', function*(){
 	this.set('Cache-Control', 'no-cache');
 	this.body = service.get_index_data();
 }));
-
-
 
 var querystring = require('querystring');
 app.use(route.get('/ajax/book', function*(){
@@ -68,7 +62,5 @@ app.use(route.get('/ajax/chapter_data', function*(){
 	}
 	this.body = service.get_chapter_content_data(id);
 }));
-
-
 
 app.listen(3000);

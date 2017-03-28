@@ -134,7 +134,10 @@
 			color:#8d8d8d;
 			padding: 14px 14px 8px;
 		}
-		.m-tag { line-height: 1;overflow: hidden;}
+		.m-tag {
+			line-height: 1;
+			overflow: hidden;
+		}
 		.m-tag.-color .u-tag:nth-child(3n+1){
 			background-color: #fbebe8;
 		}
@@ -157,7 +160,9 @@
 			text-align: center;
 			border: 1px solid #d3d3d3;
 		}
-		.book-table { font-size: 0}
+		.book-table {
+			font-size: 0
+		}
 		.book-table li>*{
 			display: inline-block;
 		}
@@ -177,7 +182,6 @@
 		.book-table li:nth-child(3n+3) {
 			text-align: right;
 		}
-
 		.top {
 			position: relative;
 			height: 44px;
@@ -200,7 +204,6 @@
 			background:url(/static/img/back.png) no-repeat;
 			background-size: 10px 16px;
 		}
-
 		.header-home {
 			float: right;
 			width: 44px;
@@ -219,7 +222,7 @@
 					<section class="main-card" style="border-bottom:none">
 						<div class="u-book -detail">
 							<div class="book-cover">
-								<img :alt="item.title" v-bind:src="item.cover">
+								<img :alt="item.title" :src="item.cover">
 							</div>
 							<div class="info">
 								<h3 class="title">{{ item.title }}</h3>
@@ -241,7 +244,7 @@
 						<div class="book-dash">
 							<div class="wrap">
 								<ul class="btn-group">
-									<li class="u-btn2" v-on:click="readBook()">
+									<li class="u-btn2" v-on:click="readBook">
 										<span class="book-dash-text"></span>
 									</li>
 								</ul>

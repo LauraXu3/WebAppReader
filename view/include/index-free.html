@@ -7,11 +7,11 @@
 			<a :href="'/book?id=' + item.fiction_id">
 				<div class="u-book -vertical">
 					<div class="book-cover">
-						<img :alt="item.title " v-bind:src="item.data.cover">
+						<img :alt="item.title " :src="item.data.cover">
 						<div class="u-tagRT -freefiction"></div>
 					</div>
 					<div class="info">
-						<h3 class="title">{{}}</h3>
+						<h3 class="title">{{item.data.title}}</h3>
 					</div>
 				</div>
 			</a>

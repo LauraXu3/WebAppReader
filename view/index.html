@@ -8,16 +8,15 @@
 		<title>书城首页</title>
 	</head>
 	<body>
-		<div id="app" v-bind:style="{width:screen_width + 'px',overflow:hidden}">
-			<% include include/header.html %>
+		<div id="app" :style="{width:screen_width + 'px',overflow:hidden}">
+			<!--<% include include/header.html %>-->
 			<div >
-				<div class="container-warp" v-bind:style="{width:screen_width + 'px',float:left}">
-					<div class="container-scroll" style="top:0px">
+				<div class="container-warp" :style="{width:screen_width + 'px',float:left}">
+					<div class="container-scroll" style="top: 0px">
 						<% include include/index-top.html%>
 						<% include include/index-hot.html%>
 						<% include include/index-free.html%>
 						<% include include/index-bottom.html%>
-
 					</div>
 				</div>
 			</div>
